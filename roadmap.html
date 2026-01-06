@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 全栈开发学习路线图</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #4f46e5;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --accent: #f43f5e;
+        }
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 { color: var(--primary); margin-bottom: 10px; }
+        .tagline { color: #64748b; font-size: 1.1em; }
+        
+        .phase {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-left: 4px solid var(--primary);
+            background: #f1f5f9;
+            border-radius: 0 8px 8px 0;
+        }
+        .phase h2 {
+            margin-top: 0;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+        }
+        .phase h2 span {
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.6em;
+            margin-right: 10px;
+        }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        strong { color: #0f172a; }
+        
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-right: 5px;
+            background: #e2e8f0;
+        }
+        .tech-supabase { background: #3ecf8e; color: white; }
+        .tech-node { background: #339933; color: white; }
+        .tech-react { background: #61dafb; color: #20232a; }
+        
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>全栈开发学习路线图 (2026)</h1>
+        <p class="tagline">从 React 进阶到具备 AI 抗风险能力的系统架构师</p>
+    </header>
+
+    <div class="phase">
+        <h2><span>01</span> Node.js 深度工程化</h2>
+        <p><strong>目标：</strong> 建立后端思维，掌握底层异步机制。</p>
+        <ul>
+            <li>掌握 <strong>Event Loop</strong>、Buffer 和 Stream（解决大文件读写性能问题）。</li>
+            <li>学习 <strong>Fastify/Express</strong> 框架，理解中间件模式。</li>
+            <li><strong>实战项目：</strong> 开发一个支持流式传输的后端文件管理工具。</li>
+        </ul>
+    </div>
+
+    <div class="phase">
+        <h2><span>02</span> 数据持久化与建模</h2>
+        <p><strong>目标：</strong> 从简单的 CRUD 转向复杂的数据架构设计。</p>
+        <ul>
+            <li>深入 <strong>Sequelize</strong>：掌握多表关联、事务(Transactions)和迁移(Migrations)。</li>
+            <li>进阶 <strong>Prisma ORM</strong>：利用 Schema 定义实现前端到后端的类型自动化。</li>
+            <li><strong>Supabase 进阶：</strong> 学习行级安全策略 (RLS) 与 Edge Functions。</li>
+        </ul>
+    </div>
+
+    <div class="phase">
+        <h2><span>03</span> NestJS 企业级架构</h2>
+        <p><strong>目标：</strong> 学习大型项目的代码组织，建立“护城河”。</p>
+        <ul>
+            <li>理解 <strong>依赖注入 (DI)</strong> 与控制反转 (IoC)。</li>
+            <li>掌握 Guard（权限守卫）、Interceptor（拦截器）和 ValidationPipe（数据校验）。</li>
+            <li><strong>关键点：</strong> 学习如何编写高可维护、可测试的后端代码。</li>
+        </ul>
+    </div>
+
+    <div class="phase">
+        <h2><span>04</span> Next.js 全栈合体</h2>
+        <p><strong>目标：</strong> 利用 SSR 和现代框架实现极致的用户体验和开发效率。</p>
+        <ul>
+            <li>掌握 <strong>Server Components (RSC)</strong> 与 Client Components 的混合使用。</li>
+            <li>使用 <strong>Server Actions</strong> 替代传统 API 请求。</li>
+            <li>集成 <strong>Auth.js (NextAuth)</strong> 实现多平台安全登录。</li>
+        </ul>
+    </div>
+
+    <div class="phase" style="border-left-color: var(--accent);">
+        <h2><span>05</span> 终极：全栈类型安全与部署</h2>
+        <ul>
+            <li>使用 <strong>tRPC</strong> 实现“无 API 定义”的前后端类型同步。</li>
+            <li>掌握 <strong>Docker</strong> 容器化部署与 CI/CD 流程。</li>
+            <li><strong>AI 协同：</strong> 学习利用 Cursor/Copilot 进行架构重构而非仅写代码。</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>保持好奇心，代码如诗。 &copy; 2026 Full-Stack Roadmap</p>
+    </footer>
+</div>
+
+</body>
+</html>
